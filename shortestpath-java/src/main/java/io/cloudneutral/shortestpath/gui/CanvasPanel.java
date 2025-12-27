@@ -10,15 +10,15 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
-import io.cloudneutral.shortestpath.graph.grid.GridSurface;
+import io.cloudneutral.shortestpath.grid.GridSurface;
 import io.cloudneutral.shortestpath.gui.canvas.Grid;
 
 public class CanvasPanel extends JPanel {
-    private GridSurface gridSettings;
+    private transient GridSurface gridSettings;
 
-    private BufferedImage bufferedImage;
+    private transient BufferedImage bufferedImage;
 
-    private Graphics2D surface;
+    private transient Graphics2D surface;
 
     public void updateCanvas(GridSurface gridSettings) {
         this.gridSettings = gridSettings;
@@ -40,7 +40,7 @@ public class CanvasPanel extends JPanel {
     @Override
     public Dimension getPreferredSize() {
         return bufferedImage == null ?
-                new Dimension(300,300) :
+                new Dimension(300, 300) :
                 new Dimension(bufferedImage.getWidth(), bufferedImage.getHeight());
     }
 

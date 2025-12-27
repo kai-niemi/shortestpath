@@ -1,9 +1,9 @@
-package io.cloudneutral.shortestpath.graph;
+package io.cloudneutral.shortestpath;
 
-import io.cloudneutral.shortestpath.graph.algorithm.AStarAlgorithm;
-import io.cloudneutral.shortestpath.graph.algorithm.BellmanFordAlgorithm;
-import io.cloudneutral.shortestpath.graph.algorithm.DijkstrasAlgorithm;
-import io.cloudneutral.shortestpath.graph.algorithm.SearchAlgorithm;
+import io.cloudneutral.shortestpath.algorithm.AStarAlgorithm;
+import io.cloudneutral.shortestpath.algorithm.BellmanFordAlgorithm;
+import io.cloudneutral.shortestpath.algorithm.DijkstrasAlgorithm;
+import io.cloudneutral.shortestpath.algorithm.SearchAlgorithm;
 
 public class WeightedGraph<N> extends Graph<N, Double> {
     public WeightedGraph() {

@@ -1,12 +1,12 @@
-package io.cloudneutral.shortestpath.graph.algorithm;
+package io.cloudneutral.shortestpath.algorithm;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import io.cloudneutral.shortestpath.graph.Edge;
-import io.cloudneutral.shortestpath.graph.Node;
-import io.cloudneutral.shortestpath.graph.TraversableGraph;
+import io.cloudneutral.shortestpath.Edge;
+import io.cloudneutral.shortestpath.Node;
+import io.cloudneutral.shortestpath.TraversableGraph;
 
 public class BellmanFordAlgorithm<N> implements SearchAlgorithm<N> {
     private FringeListener<N> fringeListener = new EmptyFringeListener<>();
@@ -39,7 +39,7 @@ public class BellmanFordAlgorithm<N> implements SearchAlgorithm<N> {
             for (Edge<Node<N>, Double> edge : graph.edges()) {
                 double cost = edge.getStart().getG() + edge.getValue();
                 if (edge.getStart().getG() != Double.MAX_VALUE
-                        && cost < edge.getEnd().getG()) {
+                    && cost < edge.getEnd().getG()) {
                     edge.getEnd().setG(cost);
                     edge.getEnd().setParent(edge.getStart());
                     fringeListener.nodeVisited(edge.getEnd());

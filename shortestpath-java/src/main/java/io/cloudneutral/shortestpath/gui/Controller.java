@@ -14,15 +14,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingWorker;
 
-import io.cloudneutral.shortestpath.graph.HeuristicCost;
-import io.cloudneutral.shortestpath.graph.Node;
-import io.cloudneutral.shortestpath.graph.WeightedGraph;
-import io.cloudneutral.shortestpath.graph.algorithm.FringeListener;
-import io.cloudneutral.shortestpath.graph.algorithm.SearchAlgorithm;
-import io.cloudneutral.shortestpath.graph.grid.Cell;
-import io.cloudneutral.shortestpath.graph.grid.Coordinate;
-import io.cloudneutral.shortestpath.graph.grid.GridSurface;
-import io.cloudneutral.shortestpath.graph.grid.Status;
+import io.cloudneutral.shortestpath.HeuristicCost;
+import io.cloudneutral.shortestpath.Node;
+import io.cloudneutral.shortestpath.WeightedGraph;
+import io.cloudneutral.shortestpath.algorithm.FringeListener;
+import io.cloudneutral.shortestpath.algorithm.SearchAlgorithm;
+import io.cloudneutral.shortestpath.grid.Cell;
+import io.cloudneutral.shortestpath.grid.Coordinate;
+import io.cloudneutral.shortestpath.grid.GridSurface;
+import io.cloudneutral.shortestpath.grid.Status;
 
 public class Controller {
     private final CanvasPanel canvasPanel;
@@ -213,7 +213,7 @@ public class Controller {
 
                     long timeCost = System.currentTimeMillis() - startTime;
 
-                    int pathCost = 0;
+                    double pathCost = 0;
                     for (Cell cell : shortestPath) {
                         pathCost += cell.getGcost();
                         graph.node(cell).setStatus(Status.path);
@@ -223,7 +223,7 @@ public class Controller {
                     graph.node(goalCell).setStatus(Status.goal);
 
                     statusLabel.setText(
-                            String.format("Nodes: %d | Edges: %d | Path Nodes: %d | Path Cost: %d | Time: %d ms",
+                            String.format("Nodes: %d | Edges: %d | Path Nodes: %d | Path Cost: %f | Time: %d ms",
                                     graph.nodes().size(),
                                     graph.edges().size(),
                                     shortestPath.size(),

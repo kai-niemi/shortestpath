@@ -17,10 +17,10 @@ public class CircleMarker extends MarkerBase {
     @Override
     protected void drawShape(Graphics2D surface) {
         Ellipse2D innerCircle = new Ellipse2D.Double(
-                point.getX()+2,
-                point.getY()+2,
-                dimension.width-4,
-                dimension.height-4
+                point.getX() + 2,
+                point.getY() + 2,
+                dimension.width - 4,
+                dimension.height - 4
         );
 
         RoundRectangle2D box = new RoundRectangle2D.Double(

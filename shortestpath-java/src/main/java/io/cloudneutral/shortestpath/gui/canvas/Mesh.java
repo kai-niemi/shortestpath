@@ -5,9 +5,9 @@ import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.Locale;
 
-import io.cloudneutral.shortestpath.graph.grid.Cell;
-import io.cloudneutral.shortestpath.graph.grid.GridSurface;
-import io.cloudneutral.shortestpath.graph.grid.Coordinate;
+import io.cloudneutral.shortestpath.grid.Cell;
+import io.cloudneutral.shortestpath.grid.Coordinate;
+import io.cloudneutral.shortestpath.grid.GridSurface;
 
 public class Mesh implements Drawable {
     private final GridSurface gs;

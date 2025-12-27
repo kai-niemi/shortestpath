@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.graph.grid;
+package io.cloudneutral.shortestpath.grid;
 
 import java.awt.Color;
 

@@ -4,10 +4,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 
-import io.cloudneutral.shortestpath.graph.grid.Coordinate;
+import io.cloudneutral.shortestpath.grid.Coordinate;
 
 public abstract class MarkerBase implements Drawable {
-    protected Dimension dimension = new Dimension(20,20);
+    protected Dimension dimension = new Dimension(20, 20);
 
     protected String label;
 

@@ -5,7 +5,7 @@
 
     <groupId>se.cloudneutral.shortestpath</groupId>
     <artifactId>shortestpath-parent</artifactId>
-    <version>1.0.0.BUILD-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>shortestpath-parent</name>
 
@@ -28,38 +28,27 @@
         <developer>
             <name>Kai Niemi</name>
             <email>kai@cloudneutral.se</email>
+            <url>https://blog.cloudneutral.se</url>
         </developer>
     </developers>
 
     <properties>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
-    <distributionManagement>
-        <repository>
-            <id>nexus</id>
-            <name>Releases</name>
-            <url>http://nexus.cloudneutral.se/repository/maven-releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus</id>
-            <name>Snapshot</name>
-            <url>http://nexus.cloudneutral.se/repository/maven-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.2</version>
+            <version>6.0.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.8.2</version>
+            <version>6.0.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -69,17 +58,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.14.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <release>21</release>
                     <encoding>UTF-8</encoding>
-                    <compilerArgument>-Xlint</compilerArgument>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.5.0</version>
                 <configuration>
                     <failOnError>false</failOnError>
                     <filesets>
@@ -92,20 +79,6 @@
                             </includes>
                         </fileset>
                     </filesets>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.amashchenko.maven.plugin</groupId>
-                <artifactId>gitflow-maven-plugin</artifactId>
-                <version>1.14.0</version>
-                <configuration>
-                    <fetchRemote>false</fetchRemote>
-                    <verbose>true</verbose>
-                    <gitFlowConfig>
-                        <!-- Single branch model -->
-                        <productionBranch>main</productionBranch>
-                        <developmentBranch>main</developmentBranch>
-                    </gitFlowConfig>
                 </configuration>
             </plugin>
         </plugins>

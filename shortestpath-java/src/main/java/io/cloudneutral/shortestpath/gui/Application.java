@@ -7,9 +7,9 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 
-public abstract class Main {
+public abstract class Application {
 
-    private Main() {
+    private Application() {
     }
 
     public static void main(String args[]) {

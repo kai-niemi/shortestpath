@@ -1,9 +1,9 @@
-package io.cloudneutral.shortestpath.graph.grid;
+package io.cloudneutral.shortestpath.grid;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-import io.cloudneutral.shortestpath.graph.HeuristicCost;
+import io.cloudneutral.shortestpath.HeuristicCost;
 
 public class Cell {
     // Diagonal octile distance (8x)
@@ -82,7 +82,7 @@ public class Cell {
     public boolean anyStatus(Status... statuses) {
         return Arrays.stream(statuses).anyMatch(s -> s.equals(status));
     }
-    
+
     public boolean allStatus(Status... statuses) {
         return Arrays.stream(statuses).allMatch(s -> s.equals(status));
     }
@@ -111,12 +111,12 @@ public class Cell {
     @Override
     public String toString() {
         return "Cell{" +
-                "x=" + x +
-                ", y=" + y +
-                ", state=" + status +
-                ", gCost=" + gCost +
-                ", hCost=" + hCost +
-                '}';
+               "x=" + x +
+               ", y=" + y +
+               ", state=" + status +
+               ", gCost=" + gCost +
+               ", hCost=" + hCost +
+               '}';
     }
 
     public String toShortString() {

@@ -1,8 +1,8 @@
-package io.cloudneutral.shortestpath.graph.algorithm;
+package io.cloudneutral.shortestpath.algorithm;
 
-import io.cloudneutral.shortestpath.graph.HeuristicCost;
-import io.cloudneutral.shortestpath.graph.Node;
-import io.cloudneutral.shortestpath.graph.TraversableGraph;
+import io.cloudneutral.shortestpath.HeuristicCost;
+import io.cloudneutral.shortestpath.Node;
+import io.cloudneutral.shortestpath.TraversableGraph;
 
 public class AStarAlgorithm<N> extends DijkstrasAlgorithm<N> {
     private final HeuristicCost<N> heuristicCost;

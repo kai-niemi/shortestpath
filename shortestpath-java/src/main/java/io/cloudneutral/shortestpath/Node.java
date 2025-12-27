@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.graph;
+package io.cloudneutral.shortestpath;
 
 import java.util.Objects;
 
@@ -86,7 +86,7 @@ public class Node<T> {
     @Override
     public String toString() {
         return "Node{" +
-                "id=" + value +
-                '}';
+               "id=" + value +
+               '}';
     }
 }

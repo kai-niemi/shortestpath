@@ -8,7 +8,7 @@ import java.awt.Graphics2D;
 import java.awt.font.TextAttribute;
 import java.text.AttributedString;
 
-import io.cloudneutral.shortestpath.graph.grid.Coordinate;
+import io.cloudneutral.shortestpath.grid.Coordinate;
 
 public class Label implements Drawable {
     private Dimension dimension = new Dimension(20, 20);
@@ -42,14 +42,14 @@ public class Label implements Drawable {
     @Override
     public void render(Graphics2D surface) {
         AttributedString as = new AttributedString(label);
-        Font font = new Font("Consolas", Font.PLAIN, (int)(dimension.width * .2));
+        Font font = new Font("Consolas", Font.PLAIN, (int) (dimension.width * .2));
         as.addAttribute(TextAttribute.FONT, font);
         as.addAttribute(TextAttribute.FOREGROUND, color, 0, label.length());
 
         FontMetrics fm = surface.getFontMetrics(font);
 
         int dx = fm.stringWidth(label) / 2;
-        int dy = (fm.getAscent() + fm.getDescent())  / 2;
+        int dy = (fm.getAscent() + fm.getDescent()) / 2;
 
         surface.drawString(as.getIterator(),
                 (float) point.getX() + dimension.width / 2f - dx,

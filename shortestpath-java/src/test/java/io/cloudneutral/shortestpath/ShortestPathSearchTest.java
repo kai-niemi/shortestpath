@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.gui;
+package io.cloudneutral.shortestpath;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,8 +8,7 @@ import java.util.TreeMap;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import io.cloudneutral.shortestpath.graph.WeightedGraph;
-import io.cloudneutral.shortestpath.graph.algorithm.SearchAlgorithm;
+import io.cloudneutral.shortestpath.algorithm.SearchAlgorithm;
 
 public class ShortestPathSearchTest {
     private WeightedGraph<String> weightedGraph() {

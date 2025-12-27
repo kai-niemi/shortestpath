@@ -2,7 +2,7 @@ package io.cloudneutral.shortestpath.gui.canvas;
 
 import java.awt.Graphics2D;
 
-import io.cloudneutral.shortestpath.graph.grid.GridSurface;
+import io.cloudneutral.shortestpath.grid.GridSurface;
 
 public class Grid implements Drawable {
     private final GridSurface gs;

@@ -1,6 +1,6 @@
-package io.cloudneutral.shortestpath.graph.grid;
+package io.cloudneutral.shortestpath.grid;
 
-import io.cloudneutral.shortestpath.graph.WeightedGraph;
+import io.cloudneutral.shortestpath.WeightedGraph;
 
 public class GridSurface {
     public static Builder builder() {

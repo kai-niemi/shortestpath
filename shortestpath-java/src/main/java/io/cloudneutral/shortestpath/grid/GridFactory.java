@@ -1,9 +1,9 @@
-package io.cloudneutral.shortestpath.graph.grid;
+package io.cloudneutral.shortestpath.grid;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import io.cloudneutral.shortestpath.graph.WeightedGraph;
+import io.cloudneutral.shortestpath.WeightedGraph;
 
 public abstract class GridFactory {
     protected GridFactory() {

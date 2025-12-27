@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/cloudneutral/shortestpath/actions/workflows/maven.yml/badge.svg)](https://github.com/cloudneutral/shortestpath/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/kai-niemi/shortestpath/actions/workflows/maven.yml/badge.svg)](https://github.com/cloudneutral/shortestpath/actions/workflows/maven.yml)
 
 # Shortest Path Algorithms
 
@@ -8,13 +8,16 @@ Sandbox for visualizing common shortest path search algorithms including:
 - [A* Search](https://en.wikipedia.org/wiki/A*_search_algorithm)
 - [Bellman-Ford](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
 
-Provides both a Java demo application and an Arma3 addon with map and 3D visuals. 
+Provides both a Java demo application and an Arma3 addon with map and 3D visuals.
+
+See [Shortest Path Search Algorithms](https://blog.cloudneutral.se/shortest-path-search-algorithms) 
+blog for more details.
 
 # Building
 
 ## Prerequisites
 
-- JDK8+ with 1.8 language level (OpenJDK compatible)
+- JDK21+ (OpenJDK compatible)
 - Maven 3+ (wrapper provided)
 
 ## Building

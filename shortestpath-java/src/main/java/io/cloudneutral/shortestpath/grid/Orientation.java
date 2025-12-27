@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.graph.grid;
+package io.cloudneutral.shortestpath.grid;
 
 public enum Orientation {
     north(0, -1),

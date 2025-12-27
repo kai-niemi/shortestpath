@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.graph;
+package io.cloudneutral.shortestpath;
 
 import java.util.Objects;
 

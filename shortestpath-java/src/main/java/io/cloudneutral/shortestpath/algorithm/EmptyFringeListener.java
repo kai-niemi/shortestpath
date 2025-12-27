@@ -1,6 +1,6 @@
-package io.cloudneutral.shortestpath.graph.algorithm;
+package io.cloudneutral.shortestpath.algorithm;
 
-import io.cloudneutral.shortestpath.graph.Node;
+import io.cloudneutral.shortestpath.Node;
 
 public class EmptyFringeListener<T> implements FringeListener<T> {
     @Override

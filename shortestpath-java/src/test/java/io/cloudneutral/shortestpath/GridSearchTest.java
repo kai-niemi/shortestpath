@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.gui;
+package io.cloudneutral.shortestpath;
 
 import java.util.HashSet;
 import java.util.List;
@@ -7,12 +7,11 @@ import java.util.Set;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import io.cloudneutral.shortestpath.graph.WeightedGraph;
-import io.cloudneutral.shortestpath.graph.grid.Cell;
-import io.cloudneutral.shortestpath.graph.grid.Status;
-import io.cloudneutral.shortestpath.graph.grid.Orientation;
+import io.cloudneutral.shortestpath.grid.Cell;
+import io.cloudneutral.shortestpath.grid.Status;
+import io.cloudneutral.shortestpath.grid.Orientation;
 
-public class GridSearchVisuals {
+public class GridSearchTest {
     private static WeightedGraph<Cell> createGrid(final int w, final int h, Set<Cell> obstructed) {
         WeightedGraph<Cell> graph = new WeightedGraph<>();
 

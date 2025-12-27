@@ -6,14 +6,25 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.GroupLayout;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSlider;
+import javax.swing.SwingConstants;
 
-import io.cloudneutral.shortestpath.graph.grid.GridSurface;
-
+import io.cloudneutral.shortestpath.grid.GridSurface;
 import static javax.swing.LayoutStyle.ComponentPlacement.RELATED;
 
 public class ControlPanel extends JPanel implements ActionListener {
-    private final Controller controller;
+    private transient Controller controller;
 
     private final JLabel statusLabel;
 
@@ -27,7 +38,7 @@ public class ControlPanel extends JPanel implements ActionListener {
 
     private JSlider animationDelay;
 
-    private JComboBox costEstimate;
+    private JComboBox<?> costEstimate;
 
     private JFrame frame;
 
@@ -102,7 +113,7 @@ public class ControlPanel extends JPanel implements ActionListener {
         aStar.setActionCommand("findpath_astar");
         aStar.addActionListener(this::actionPerformed);
 
-        this.costEstimate = new JComboBox(
+        this.costEstimate = new JComboBox<>(
                 Arrays.asList("Octile Distance", "Euclidean Distance", "Manhattan Distance").toArray());
         costEstimate.setSelectedIndex(1);
         costEstimate.addActionListener(this::actionPerformed);

@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.graph;
+package io.cloudneutral.shortestpath;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -45,14 +45,6 @@ public class Graph<N, V> implements Iterable<N>, ImmutableGraph<N, V> {
     @Override
     public Optional<V> edgeValue(N from, N to) {
         return Optional.ofNullable(findEdge(from, to)).map(Edge::getValue);
-    }
-
-    public void putEdgeValue(N start, N target, V value) {
-        Edge<N, V> edge = findEdge(start, target);
-        if (edge == null) {
-            throw new IllegalArgumentException("No such edge: " + start + "->" + target);
-        }
-        edge.setValue(value);
     }
 
     private Edge<N, V> findEdge(N start, N target) {

@@ -1,4 +1,4 @@
-package io.cloudneutral.shortestpath.graph.algorithm;
+package io.cloudneutral.shortestpath.algorithm;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,11 +9,11 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 
-import io.cloudneutral.shortestpath.graph.Node;
-import io.cloudneutral.shortestpath.graph.TraversableGraph;
+import io.cloudneutral.shortestpath.Node;
+import io.cloudneutral.shortestpath.TraversableGraph;
 
 public class DijkstrasAlgorithm<N> implements SearchAlgorithm<N> {
-    private FringeListener<N> fringeListener = new EmptyFringeListener();
+    private FringeListener<N> fringeListener = new EmptyFringeListener<>();
 
     private final TraversableGraph<N> graph;
 
